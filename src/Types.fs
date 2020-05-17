@@ -1,16 +1,14 @@
 namespace Thoth.Json
 
 type IDecoderHelpers<'JsonValue> =
-    abstract GetField : FieldName : string -> value : 'JsonValue -> 'A
+    abstract GetField : FieldName : string -> value : 'JsonValue -> 'JsonValue
     abstract IsString : value : 'JsonValue -> bool
     abstract IsBoolean : value : 'JsonValue -> bool
     abstract IsNumber : value : 'JsonValue -> bool
     abstract IsArray : value : 'JsonValue -> bool
     abstract IsObject : value : 'JsonValue -> bool
-    abstract IsNaN : value : 'JsonValue -> bool
     abstract IsNullValue : value : 'JsonValue -> bool
     abstract IsIntegralValue : value : 'JsonValue -> bool
-    abstract IsIntFinite : value : 'JsonValue -> bool
     abstract IsUndefined : value : 'JsonValue -> bool
     abstract AnyToString : value : 'JsonValue -> string
 
